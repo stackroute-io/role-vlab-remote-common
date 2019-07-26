@@ -1,0 +1,21 @@
+---
+# tasks file for stackroute.vlab-remote-common
+- name: Install mate-desktop and xrdp
+  package:
+    name: "{{ item }}"
+  loop:
+    - mate-desktop-environment-core
+    - mate-applets-common
+    - xrdp
+- name: Start xrdp Server
+  service:
+    name: xrdp
+    state: started
+    enabled: yes
+- name: Copy libxcb.so.1 # required for vscode to work correctly
+  copy:
+    src: libxcb.so.1.1.0
+    dest: "{{ item }}"
+  loop:
+    - /usr/share/atom/libxcb.so.1
+    - /usr/share/code/libxcb.so.1
