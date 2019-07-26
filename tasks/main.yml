@@ -19,3 +19,8 @@
   loop:
     - /usr/share/atom/libxcb.so.1
     - /usr/share/code/libxcb.so.1
+- name: Set password for ubuntu user
+  user:
+    name: ubuntu
+    password: apT/yUi4toekg
+    update_password: always
