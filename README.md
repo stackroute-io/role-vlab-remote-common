@@ -1,4 +1,4 @@
-stackroute.vlab-remote-common
+sagarpatke.role_vlab_remote_common
 =========
 
 VLAB RDP Setup for StackRoute.
@@ -29,7 +29,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - role: stackroute.vlab-remote-common
+    - role: sagarpatke.role_vlab_remote_common
 ```
 
 License
@@ -40,4 +40,4 @@ MIT
 Author Information
 ------------------
 
-- [Sagar Patke](https://github.com/sagarpatkeatl), [StackRoute] (http://stackroute.in)
+- [Sagar Patke](https://github.com/sagarpatkeatl)
