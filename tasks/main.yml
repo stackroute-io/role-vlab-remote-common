@@ -22,5 +22,5 @@
 - name: Set password for ubuntu user
   user:
     name: ubuntu
-    password: apT/yUi4toekg
+    password: root123
     update_password: always
