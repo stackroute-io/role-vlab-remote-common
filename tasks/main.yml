@@ -7,6 +7,14 @@
     - mate-desktop-environment-core
     - mate-applets-common
     - xrdp
+- name: Install mate applets for bionic
+  package:
+    name: "{{ item }}"
+  loop:
+    - mate-applet-brisk-menu
+    - mate-indicator-applet
+    - ubuntu-mate-icon-themes
+  when: ansible_facts.lsb.codename == 'bionic'
 - name: Start xrdp Server
   service:
     name: xrdp
