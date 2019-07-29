@@ -27,8 +27,3 @@
   loop:
     - /usr/share/atom/libxcb.so.1
     - /usr/share/code/libxcb.so.1
-- name: Set password for ubuntu user
-  user:
-    name: ubuntu
-    password: root123
-    update_password: always
